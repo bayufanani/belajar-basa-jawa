@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhtruj61j83r"]
+
+[ext_resource type="Script" path="res://dragable.gd" id="1_7haqm"]
+[ext_resource type="Texture2D" uid="uid://i1c08abeljct" path="res://bg_tombol.png" id="1_pftem"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iloyf"]
+resource_local_to_scene = true
+font_size = 23
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rege"]
+resource_local_to_scene = true
+radius = 23.0
+height = 154.0
+
+[node name="Draggable" type="Area2D"]
+script = ExtResource("1_7haqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.135, 0.135)
+texture = ExtResource("1_pftem")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -16.0
+offset_right = 50.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test Text"
+label_settings = SubResource("LabelSettings_iloyf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7rege")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
