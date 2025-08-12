@@ -9,11 +9,10 @@ var dropzone
 	set(value):
 		label_text = value
 		$Label.text = value
-	get():
-		return $Label.text
 
 func _ready() -> void:
 	original_position = position
+	$Label.text = label_text
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -38,9 +37,7 @@ func animate_to_dropzone():
 
 func animate_back_to_original_place():
 	tweening("global_position", original_position)
-	if dropzone!=null:
-		dropzone.occupied_by = null
-		dropzone = null
+	dropzone = null
 
 func tweening(property, destination):
 	var tween = create_tween()
