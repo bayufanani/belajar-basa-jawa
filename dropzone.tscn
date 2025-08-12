@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g5wnb"]
 resource_local_to_scene = true
-radius = 18.0
+radius = 22.0
 height = 82.0
 
 [node name="Dropzone" type="Area2D" groups=["dropzone"]]

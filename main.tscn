@@ -68,34 +68,22 @@ dropzone_name = "rambut"
 [node name="Dragables" type="Node2D" parent="."]
 
 [node name="Dragable" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-463, -219)
-dragable_name = "rambut"
-label_text = "Rambut"
+position = Vector2(-288, -104)
 
 [node name="Dragable2" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-285, -219)
-dragable_name = "bathuk"
-label_text = "Bathuk"
+position = Vector2(-456, -104)
 
 [node name="Dragable3" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-463, -142)
-dragable_name = "weteng"
-label_text = "Weteng"
+position = Vector2(-288, -168)
 
 [node name="Dragable4" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-285, -142)
-dragable_name = "pundhak"
-label_text = "Pundhak"
+position = Vector2(-456, -168)
 
 [node name="Dragable5" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-463, -65)
-dragable_name = "sikil"
-label_text = "Sikil"
+position = Vector2(-288, -232)
 
 [node name="Dragable6" parent="Dragables" instance=ExtResource("3_mf3m2")]
-position = Vector2(-285, -65)
-dragable_name = "pipi"
-label_text = "Pipi"
+position = Vector2(-456, -232)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 anchors_preset = 15

@@ -8,8 +8,9 @@ var dropzone
 @export var label_text: String:
 	set(value):
 		label_text = value
-		$Label.text = value		
-@onready var label = $Label
+		$Label.text = value
+	get():
+		return $Label.text
 
 func _ready() -> void:
 	original_position = position
@@ -47,6 +48,7 @@ func tweening(property, destination):
 	tween.tween_property(self, property, destination, .5)\
 		.set_trans(Tween.TRANS_SINE)\
 		.set_ease(Tween.EASE_OUT)
+	await tween.finished
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("dropzone") and not area.is_occupied() and dragging:
@@ -54,4 +56,5 @@ func _on_area_entered(area: Area2D) -> void:
 		dropzone = area
 
 func _on_area_exited(area: Area2D) -> void:
-	in_dropzone = false
+	if area.is_in_group("dropzone"):
+		in_dropzone = false
