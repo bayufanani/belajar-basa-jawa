@@ -32,7 +32,6 @@ func _input(event: InputEvent) -> void:
 			animate_to_dropzone()
 		else:
 			animate_back_to_original_place()
-		print("end drag")
 
 func animate_to_dropzone():
 	tweening("global_position", dropzone.position)
