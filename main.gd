@@ -6,6 +6,6 @@ func cek_jawaban():
 	for i:Area2D in dragables:
 		if i.dropzone!=null and i.dropzone.dropzone_name == i.dragable_name:
 			jawaban_benar += 1
-	
-	$Score.visible = true
-	$Score.tampilkan_nilai(jawaban_benar, dragables.size())
+	var animation = $Score/AnimationPlayer
+	animation.play("show_up")
+	#$Score.tampilkan_nilai(jawaban_benar, dragables.size())

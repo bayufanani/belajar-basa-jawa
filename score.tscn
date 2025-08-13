@@ -1,10 +1,317 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1hlrsbjd13cx"]
+[gd_scene load_steps=12 format=3 uid="uid://d1hlrsbjd13cx"]
 
 [ext_resource type="Script" path="res://score.gd" id="1_000g3"]
 [ext_resource type="Texture2D" uid="uid://bbxkabagqj7sm" path="res://bg_box.png" id="1_c08k0"]
 [ext_resource type="Texture2D" uid="uid://cxypj7i7e0gmc" path="res://Banner_Orange.png" id="2_iaopk"]
 [ext_resource type="Texture2D" uid="uid://0wcde1sjl63v" path="res://star_full.png" id="3_ylkyd"]
 [ext_resource type="Texture2D" uid="uid://cnnid5evsvjtf" path="res://Icon_Small_WhiteOutline_X.png" id="5_mm8kd"]
+
+[sub_resource type="Animation" id="Animation_cn6kc"]
+resource_local_to_scene = true
+resource_name = "show_up"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CanvasGroup/Control/bg:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CanvasGroup/Control/star1:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.266667, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/CanvasGroup/Control/star2:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.433333, 0.5),
+"transitions": PackedFloat32Array(1, 0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/CanvasGroup/Control/star3:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.333333, 0.466667, 0.533333),
+"transitions": PackedFloat32Array(1, 0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/CanvasGroup/Control/star4:scale")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.366667, 0.5, 0.566667),
+"transitions": PackedFloat32Array(1, 0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/CanvasGroup/Control/star5:scale")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/CanvasGroup/Control/star6:scale")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.433333, 0.566667, 0.633333, 0.633433),
+"transitions": PackedFloat32Array(1, 0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.5, 1.5), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/CanvasGroup/Control/nilai:scale")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.266667, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/CanvasGroup/Control/bg/close_button:scale")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/CanvasGroup:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationPlayer/CanvasGroup/Control:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2wrp1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CanvasGroup/Control/bg:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CanvasGroup/Control/star1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/CanvasGroup/Control/star2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/CanvasGroup/Control/star6:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/CanvasGroup/Control/nilai:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/CanvasGroup/Control/bg/close_button:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/CanvasGroup:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/CanvasGroup/Control:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uysda"]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CanvasGroup:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CanvasGroup/Control:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 300)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cm54e"]
+_data = {
+"RESET": SubResource("Animation_2wrp1"),
+"hide": SubResource("Animation_uysda"),
+"show_up": SubResource("Animation_cn6kc")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbgnb"]
 font_size = 176
@@ -17,9 +324,19 @@ outline_size = 70
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Score" type="Node2D"]
+visible = false
 script = ExtResource("1_000g3")
 
-[node name="Control" type="Control" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cm54e")
+}
+autoplay = "RESET"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+
+[node name="Control" type="Control" parent="AnimationPlayer/CanvasGroup"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,17 +347,31 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.36, 0.36)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+[node name="overlay" type="ColorRect" parent="AnimationPlayer/CanvasGroup/Control"]
+layout_mode = 0
+offset_left = -2628.0
+offset_top = -1392.0
+offset_right = 2628.0
+offset_bottom = 1391.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="bg" type="Control" parent="AnimationPlayer/CanvasGroup/Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="AnimationPlayer/CanvasGroup/Control/bg"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -612.0
-offset_top = -718.0
-offset_right = 612.0
-offset_bottom = 717.0
+offset_left = -632.0
+offset_top = -738.0
+offset_right = 592.0
+offset_bottom = 697.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -50,90 +381,94 @@ patch_margin_top = 335
 patch_margin_right = 346
 patch_margin_bottom = 368
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control/bg"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -668.0
-offset_top = -792.941
-offset_right = 668.0
-offset_bottom = -335.941
+offset_left = -688.0
+offset_top = -812.941
+offset_right = 648.0
+offset_bottom = -355.941
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_iaopk")
 
-[node name="star1" type="TextureRect" parent="Control"]
+[node name="close_button" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control/bg"]
 layout_mode = 0
-offset_left = -450.0
-offset_top = -169.444
-offset_right = -273.0
-offset_bottom = 1.55556
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
+offset_left = -75.0001
+offset_top = 588.889
+offset_right = 87.9999
+offset_bottom = 751.889
+pivot_offset = Vector2(80.5557, 83.3332)
+mouse_filter = 0
+texture = ExtResource("5_mm8kd")
 
-[node name="star2" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = -302.778
-offset_top = -219.444
-offset_right = -125.778
-offset_bottom = -48.4445
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
-
-[node name="star3" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = -161.111
-offset_top = -269.444
-offset_right = 15.8889
-offset_bottom = -98.4445
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
-
-[node name="star4" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 8.33329
-offset_top = -269.444
-offset_right = 185.333
-offset_bottom = -98.4445
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
-
-[node name="star5" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 166.667
-offset_top = -219.444
-offset_right = 343.667
-offset_bottom = -48.4445
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
-
-[node name="star6" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 316.667
-offset_top = -166.667
-offset_right = 493.667
-offset_bottom = 4.33331
-scale = Vector2(0.845, 0.845)
-texture = ExtResource("3_ylkyd")
-
-[node name="Label" type="Label" parent="Control"]
+[node name="title" type="Label" parent="AnimationPlayer/CanvasGroup/Control/bg"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -482.0
+offset_left = -502.0
 offset_top = -708.333
-offset_right = 482.0
+offset_right = 462.0
 offset_bottom = -385.333
 grow_horizontal = 2
 text = "Skor Kamu"
 label_settings = SubResource("LabelSettings_xbgnb")
 autowrap_mode = 2
 
-[node name="nilai" type="Label" parent="Control"]
+[node name="star1" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = -500.0
+offset_top = -177.778
+offset_right = -323.0
+offset_bottom = -6.77777
+pivot_offset = Vector2(88.7574, 85.4696)
+texture = ExtResource("3_ylkyd")
+
+[node name="star2" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = -336.111
+offset_top = -227.778
+offset_right = -159.111
+offset_bottom = -56.7783
+pivot_offset = Vector2(88.7741, 88.9946)
+texture = ExtResource("3_ylkyd")
+
+[node name="star3" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = -177.778
+offset_top = -277.778
+offset_right = -0.777878
+offset_bottom = -106.778
+pivot_offset = Vector2(88.7572, 92.0442)
+texture = ExtResource("3_ylkyd")
+
+[node name="star4" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = 5.55556
+offset_top = -280.556
+offset_right = 182.555
+offset_bottom = -109.556
+pivot_offset = Vector2(88.7574, 88.7569)
+texture = ExtResource("3_ylkyd")
+
+[node name="star5" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = 163.889
+offset_top = -230.556
+offset_right = 340.889
+offset_bottom = -59.5561
+pivot_offset = Vector2(88.3097, 91.5969)
+texture = ExtResource("3_ylkyd")
+
+[node name="star6" type="TextureRect" parent="AnimationPlayer/CanvasGroup/Control"]
+offset_left = 327.778
+offset_top = -180.556
+offset_right = 504.778
+offset_bottom = -9.55522
+pivot_offset = Vector2(88.757, 88.7578)
+texture = ExtResource("3_ylkyd")
+
+[node name="nilai" type="Label" parent="AnimationPlayer/CanvasGroup/Control"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -143,18 +478,10 @@ offset_top = -75.0
 offset_right = 469.555
 offset_bottom = 588.0
 grow_horizontal = 2
+pivot_offset = Vector2(494.445, 372.222)
 text = "6/6"
 label_settings = SubResource("LabelSettings_cseaq")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = -75.0001
-offset_top = 588.889
-offset_right = 87.9999
-offset_bottom = 751.889
-mouse_filter = 0
-texture = ExtResource("5_mm8kd")
-
-[connection signal="gui_input" from="Control/TextureRect2" to="." method="_close_input"]
+[connection signal="gui_input" from="AnimationPlayer/CanvasGroup/Control/bg/close_button" to="." method="_close_input"]
