@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://main.gd" id="1_4yj4q"]
 [ext_resource type="Texture2D" uid="uid://bbxkabagqj7sm" path="res://bg_box.png" id="1_y3d3a"]
 [ext_resource type="Texture2D" uid="uid://0gjktck3pusm" path="res://bocah.png" id="2_k5dxg"]
+[ext_resource type="Texture2D" uid="uid://c4h8i7s7q8u7m" path="res://classroom.jpg" id="2_k848u"]
 [ext_resource type="PackedScene" uid="uid://bhtruj61j83r" path="res://dragable.tscn" id="3_mf3m2"]
 [ext_resource type="PackedScene" uid="uid://br33y1qslbfcq" path="res://dropzone.tscn" id="4_4ltl2"]
 [ext_resource type="Texture2D" uid="uid://nhil0prn35y4" path="res://bg_ok.png" id="5_bmmqj"]
 [ext_resource type="Texture2D" uid="uid://26hdgpnkhty0" path="res://ic_check.png" id="6_guugd"]
 [ext_resource type="Script" path="res://nine_patch_rect.gd" id="6_p2bua"]
-[ext_resource type="PackedScene" uid="uid://d1hlrsbjd13cx" path="res://score.tscn" id="9_g6hnf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bg0cp"]
 font_size = 101
@@ -17,6 +17,23 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4yj4q")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.728822, 0.728822, 0.728822, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -964.0
+offset_top = -537.0
+offset_right = 956.0
+offset_bottom = 543.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.615, 0.615)
+pivot_offset = Vector2(960, 540)
+texture = ExtResource("2_k848u")
 
 [node name="view" type="Camera2D" parent="."]
 
@@ -141,7 +158,54 @@ offset_bottom = 214.0
 text = "Cek Jawaban"
 label_settings = SubResource("LabelSettings_bg0cp")
 
-[node name="Score" parent="." instance=ExtResource("9_g6hnf")]
-visible = false
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(7, -128, 166, -161)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(307, -190, 176, -215)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(217, -81, 335, -71)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="."]
+points = PackedVector2Array(119, -32, -12, -24)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D5" type="Line2D" parent="."]
+points = PackedVector2Array(319, 33, 178, 44)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2(-594.4, -329.1)
+scale = Vector2(0.615, 0.615)
+points = PackedVector2Array(1155.12, 870.081, 987.642, 639.187)
+width = 5.0
+default_color = Color(0.0431373, 0.00392157, 0.121569, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [connection signal="gui_input" from="Control/NinePatchRect" to="Control/NinePatchRect" method="_on_nine_patch_rect_gui_input"]

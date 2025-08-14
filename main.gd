@@ -1,4 +1,5 @@
 extends Node2D
+var scoreScene = preload("res://score.tscn")
 
 func cek_jawaban():
 	var jawaban_benar = 0;
@@ -6,6 +7,8 @@ func cek_jawaban():
 	for i:Area2D in dragables:
 		if i.dropzone!=null and i.dropzone.dropzone_name == i.dragable_name:
 			jawaban_benar += 1
-	var animation = $Score/AnimationPlayer
-	animation.play("show_up")
-	#$Score.tampilkan_nilai(jawaban_benar, dragables.size())
+			
+	var scoreInstance = scoreScene.instantiate()
+	var animation = scoreInstance.get_node("AnimationPlayer")
+	add_child(scoreInstance)
+	scoreInstance.tampilkan_nilai(jawaban_benar, dragables.size())
